@@ -1,4 +1,4 @@
-# Session ID - Session Title
+# DT269 - Rethink Workflow Customization for SAP S/4HANA
 
 ## Description
 
