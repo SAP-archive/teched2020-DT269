@@ -4,18 +4,23 @@ This repository contains the material for the SAP TechEd 2020 session called DT2
 
 ## Overview
 
-This session introduces attendees to SAP ITCM extensibility from Kyma runtime, which brings smooth integration experiences between ITCM and Kyma runtime. The extensibility not only makes possible integration between ITCM and SAP on promise solution via Kyma runtime but also can be leveraged by partners to provide customizations service around ITCM like external billing and multi-tenancy related.
+This session introduces attendees to SAP ITCM extensibility from Kyma runtime, which brings smooth integration experiences between ITCM and Kyma runtime. The extensibility not only makes possible integration between ITCM and SAP on promise solution via Kyma runtime but also can be leveraged by partners to provide customized solution and full fill their e2e user cases around ITCM.
 
-- ITCM
+- **ITCM**<br>
+A Kubernetes base SaaS offering, behind the scences is composed by serval micrio-services. The conmunicate with each other are mostly event, which is known as an event-driving architecture.
 
-//TODO
+- **Kyma runtime**
+> Kyma is a cloud-native extensibility framework developed to overcome the challenges of digital transformation, which include heterogeneous product portfolio, monolithic deployments and cloud native development. Our goal is to provide application extensions in a cloud-native fashion and with increased agility through seamless integration with the products.<br>
+ \- cxwiki.sap.com
 
-- Kyma runtime
+ITCM build-in supports for Kyma runtime, in ITCM Extension Center, user can easily register Kyma runtime, publish event Mesh or Open API to Kyma runtime. Customized solution can be implemented as a serverless function in Kyma runtime. In a serverless fasion, partners can focus on the integration code only, the CI/CD part like building, deployment, autoscale, etc, will be taken over by Kyma runtime. 
 
-//TODO
+The 3 exercises demonstrate an e2e integration case from ITCM to Kyma step by step.
 
 ## Requirements
-The requirements to follow the exercises in this repository are...
+
+- ITCM solution provisioned on cloud
+- Kyma runtime provisioned by Gardener or SAP Cloud Platform(SCP) on cloud
 
 ## Exercises
 
