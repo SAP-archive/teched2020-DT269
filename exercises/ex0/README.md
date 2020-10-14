@@ -1,8 +1,8 @@
-# Level 1 Heading
+# Introduction
 
 In this exercise, you will...
 
-## Level 2 Heading
+## Demo Scenario 
 
 After completing these steps you will have....
 
@@ -19,6 +19,10 @@ After completing these steps you will have....
     RETURN.
   ENDIF.
 ```
+
+## Architecture
+
+### Architecture Diagram
 
 ## Summary
 

@@ -1,37 +1,41 @@
-# DT269 - Rethink Workflow Customization for SAP S/4HANA
+# DT269 - Extensibility for SAP Intelligent Trand Claims Management(ITCM) from project "Kyma"
 
-## Description
-
-This repository contains the material for the SAP TechEd 2020 session called Session ID - Session Title.  
+This repository contains the material for the SAP TechEd 2020 session called DT269 - Extensibility for SAP Intelligent Trand Claims Management(ITCM) from project "Kyma".  
 
 ## Overview
 
-This session introduces attendees to...
+This session introduces attendees to SAP ITCM extensibility from Kyma runtime, which brings smooth integration experiences between ITCM and Kyma runtime. The extensibility not only makes possible integration between ITCM and SAP on promise solution via Kyma runtime but also can be leveraged by partners to provide customizations service around ITCM like external billing and multi-tenancy related.
+
+- ITCM
+
+//TODO
+
+- Kyma runtime
+
+//TODO
 
 ## Requirements
-
 The requirements to follow the exercises in this repository are...
 
 ## Exercises
 
-Provide the exercise content here directly in README.md using [markdown](https://guides.github.com/features/mastering-markdown/) and linking to the specific exercise pages, below is an example.
+- [Introduction](exercises/ex0/)
+    - [Architecture](exercises/ex1#exercise-11-sub-exercise-1-description)
+    - [Demo Scenario](exercises/ex1#exercise-11-sub-exercise-1-description)
+- [Exercise 1 - Setup connection between ITCM and Kyma runtime](exercises/ex1/)
+    - [Step 1.1 - Register Kyma runtime in ITCM Extension Center](exercises/ex1#exercise-11-sub-exercise-1-description)
+    - [Step 1.2 - Create ITCM application in Kyma runtime](exercises/ex1#exercise-12-sub-exercise-2-description)
+    - [Step 1.3 - Register ITCM exposed domain event APIs on Kyma runtime](exercises/ex1#exercise-12-sub-exercise-2-description)
+- [Exercise 2 - Implement extensional functions in Kyma runtime](exercises/ex2/)
+    - [Step 2.1 - Create an exec function for consuming ITCM domain events in Kyma runtime](exercises/ex2#exercise-21-sub-exercise-1-description)
+    - [Step 2.2 - Create a fetch function, expose API for the external solution in Kyma runtime](exercises/ex2#exercise-21-sub-exercise-1-description)
+    - [Step 2.3 - Create an upload function, process ITCM domain event in Kyma runtime](exercises/ex2#exercise-21-sub-exercise-1-description)
+- [Exercise 3 - Interaction between ICTM and Kyma runtime](exercises/ex2/)
+    - [Step 3.1 - Sync a new claim which has an empty remark in ITCM](exercises/ex2#exercise-21-sub-exercise-1-description)
+    - [Step 3.2 - Upload invoice pic to Kyma runtime from the ITCM mobile app](exercises/ex2#exercise-22-sub-exercise-2-description)
+    - [Step 3.3 - Upload function process the invoice pic in Kyma runtime and update claim in ITCM](exercises/ex2#exercise-22-sub-exercise-2-description)
 
-- [Getting Started](exercises/ex0/)
-- [Exercise 1 - First Exercise Description](exercises/ex1/)
-    - [Exercise 1.1 - Exercise 1 Sub Exercise 1 Description](exercises/ex1#exercise-11-sub-exercise-1-description)
-    - [Exercise 1.2 - Exercise 1 Sub Exercise 2 Description](exercises/ex1#exercise-12-sub-exercise-2-description)
-- [Exercise 2 - Second Exercise Description](exercises/ex2/)
-    - [Exercise 2.1 - Exercise 2 Sub Exercise 1 Description](exercises/ex2#exercise-21-sub-exercise-1-description)
-    - [Exercise 2.2 - Exercise 2 Sub Exercise 2 Description](exercises/ex2#exercise-22-sub-exercise-2-description)
-
-
-**OR** Link to the PDF document stored in your github repo for example...
-
-Start the exercises [here](exercises/myPDFDoc.pdf).
-    
-**OR** Link to the Tutorial Navigator for example...
-
-Start the exercises [here](https://developers.sap.com/tutorials/abap-environment-trial-onboarding.html).
+exercises demo video [here](https://sap.sharepoint.com/:v:/r/teams/S4HANALabs-Eureka/Shared%20Documents/04%20-%20Engineering%20%26%20Ops/Tech%20Foundations/teched/TechEd.mp4?csf=1&web=1&e=Ll7Q6V).
 
 **IMPORTANT**
 
