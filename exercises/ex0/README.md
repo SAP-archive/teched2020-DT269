@@ -1,30 +1,26 @@
 # Introduction
 
-In this exercise, you will...
+ The demo is an e2e integrated case that presents ITCM extensibility from Kyma runtime.
 
-## Demo Scenario 
+**From ITCM**,</br>
+New claim sync in ITCM publish a claim created domain event, which is subscribed by a serverless function in Kyma runtime, persists event, and prepares for the processing later on.
 
-After completing these steps you will have....
-
-1.	Click here.
-<br>![](/exercises/ex0/images/00_00_0010.png)
-
-2.	Insert this code.
-```
- DATA(lt_params) = request->get_form_fields(  ).
- READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
-  IF sy-subrc <> 0.
-    response->set_status( i_code = 400
-                     i_reason = 'Bad request').
-    RETURN.
-  ENDIF.
-```
+**From a retailer mobile App**,</br>
+events show as notifications by calling rest API exposed by another serverless function in Kyma runtime.</br>
+Process the new notification, take a pic of an invoice document. The pic will be uploaded to a third serverless function in Kyma runtime, which will process the pic, call a third party OCR service, generate remark and update the related claim record in ITCM directly.
 
 ## Architecture
 
+Follow a pub-sub pattern, ITCM publishes events to Kyma runtime, serverless functions in Kyma runtime process the event then.
+
 ### Architecture Diagram
+
+![](/exercises/ex0/images/kyma-integration-demo-architecture-diagram.png)
+
+## Scenario Diagram
+
+![](/exercises/ex0/images/kyma-integration-demo-diagram.png)
 
 ## Summary
 
-Now that you have ... 
-Continue to - [Exercise 1 - Exercise 1 Description](../ex1/README.md)
+Start exercise - [Exercise 1 - Setup connection between ITCM and Kyma runtime](../ex1/README.md)

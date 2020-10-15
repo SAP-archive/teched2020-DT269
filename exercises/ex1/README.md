@@ -1,44 +1,42 @@
-# Exercise 1 - Exercise 1 Description
+# Exercise 1 - Setup connection between ITCM and Kyma runtime
 
-In this exercise, we will create...
+In this exercise, you will setup a connection between ITCM and Kyma runtime, register ITCM domain events on Kyma runtime.
 
-## Exercise 1.1 Sub Exercise 1 Description
+## Step 1.1 - Create a ITCM application in Kyma runtime
 
-After completing these steps you will have created...
+Create an ITCM application in Kyma cockpit.
 
-1. Click here.
-<br>![](/exercises/ex1/images/01_01_0010.png)
+![](/exercises/ex1/images/e1-create-app.png)
 
-2.	Insert this line of code.
-```abap
-response->set_text( |Hello World! | ). 
-```
+Binding ITCM application to a namespace.
 
+![](/exercises/ex1/images/e1-create-app-binding.png)
 
+## Step 1.2 - Register Kyma runtime in ITCM Extension Center
 
-## Exercise 1.2 Sub Exercise 2 Description
+Register Kyma runtime in ITCM Extension Center system tab.
 
-After completing these steps you will have...
+![](/exercises/ex1/images/e1-register-kyma.png)
 
-1.	Enter this code.
-```abap
-DATA(lt_params) = request->get_form_fields(  ).
-READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
-  IF sy-subrc <> 0.
-    response->set_status( i_code = 400
-                     i_reason = 'Bad request').
-    RETURN.
-  ENDIF.
+## Step 1.3 - Register ITCM exposed domain event APIs on Kyma runtime
 
-```
+Expose domain event to Kyma runtime by a secure connection.
 
-2.	Click here.
-<br>![](/exercises/ex1/images/01_02_0010.png)
+**To secure the connection, you need to generate a private key by OpenSSL tool and request a certificate signed by Kyma runtime.**
+**The credential is mandatory for the communication with Kyma runtime.**
+</br>Detail steps:
+</br>![here](https://kyma-project.io/docs/components/application-connector/#tutorials-get-the-client-certificate)
 
+Choose claims from categorized event on Event Mesh.
+<br>![](/exercises/ex1/images/e1-events-list.png)
+
+Event reference.
+<br>![](/exercises/ex1/images/e1-events-detail.png)
+
+Define a channel for event publishing.
+<br>![](/exercises/ex1/images/e1-events-channel.png)
 
 ## Summary
 
-You've now ...
-
-Continue to - [Exercise 2 - Exercise 2 Description](../ex2/README.md)
+Continue to - [Exercise 2 - Implement extensional functions in Kyma runtime](../ex2/README.md)
 
