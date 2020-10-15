@@ -1,42 +1,49 @@
-# Exercise 2 - Exercise 2 Description
+# Exercise 3 - Interaction between ITCM and Kyma runtime
 
-In this exercise, we will create...
+Now, let's start the interaction!
+First, sync a claim in ITCM. The "Claim Created" event was published through the channel defined in ITCM Extension Center.
+Function itcm-func-exec do the event persistence. 
+Mobile App syncs the event data by calling function itcm-func-fetch.
+From the mobile app, a retailer process an event by taking a pic of an invoice document.
+Function itcm-func-upload process the pic, call a 3rd party OCR service by REST API. 
+Extract a remark, update related claim with an extracted remark, and the invoice document as an attachment.
 
-## Exercise 2.1 Sub Exercise 1 Description
+## Step 3.1 - Sync a new claim which has an empty remark in ITCM
 
-After completing these steps you will have created...
+Sync to show a new incoming claim with an empty remark and no attachment. 
 
-1. Click here.
-<br>![](/exercises/ex2/images/02_01_0010.png)
+Press the sync button on the ITCM list view, take newly created claim 5600 as an example.
+<br>![](/exercises/ex3/images/e3-itcm-claim-created.png)
 
-2.	Insert this line of code.
-```abap
-response->set_text( |Hello ABAP World! | ). 
-```
+Empty remark for claim 5600.
+<br>![](/exercises/ex3/images/e3-itcm-claim-detail.png)
 
+Empty attachment for claim 5600.
+<br>![](/exercises/ex3/images/e3-itcm-claim-empty-attachment.png)
 
+## Step 3.2 - Upload invoice pic to Kyma runtime from the ITCM mobile app
 
-## Exercise 2.2 Sub Exercise 2 Description
+From a retailer's mobile app, scroll down to claim 5600, process the claim by taking a pic of an invoice document.
 
-After completing these steps you will have...
+Find claim 5600 from the retailer mobile app.
+<br>![](/exercises/ex3/images/e3-mobile-process-event.png)
 
-1.	Enter this code.
-```abap
-DATA(lt_params) = request->get_form_fields(  ).
-READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
-  IF sy-subrc = 0.
-    response->set_status( i_code = 200
-                     i_reason = 'Everything is fine').
-    RETURN.
-  ENDIF.
+Take a pic of an invoice document for claim 5600.
+<br>![](/exercises/ex3/images/e3-mobile-upload-invoice.png)
 
-```
+## Step 3.3 - Upload function process the invoice pic in Kyma runtime and update claim in ITCM
 
-2.	Click here.
-<br>![](/exercises/ex2/images/02_02_0010.png)
+Go back to claim 5600 detail in ITCM, remark filled.
+<br>![](/exercises/ex3/images/e3-itcm-remark.png)
+
+Also, the attachment file was uploaded.
+<br>![](/exercises/ex3/images/e3-itcm-claim-attachment.png)
 
 ## Summary
 
-You've now ...
+You've now completed the Exercise and learned
 
-Continue to - [Exercise 3 - Excercise 3 ](../ex3/README.md)
+- Pair ITCM & Kyma runtime.
+- Implement an extensional service by creating a serverless function in Kyma runtime.
+- Extensibility ITCM is provided, demonstrated by an e2e user case.
+
