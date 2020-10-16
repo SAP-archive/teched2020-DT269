@@ -12,31 +12,31 @@ Extract a remark, update related claim with an extracted remark, and the invoice
 
 Sync to show a new incoming claim with an empty remark and no attachment. 
 
-Press the sync button on the ITCM list view, take newly created claim 5600 as an example.
+1.Press the sync button on the ITCM list view, take newly created claim 5600 as an example.
 <br>![](/exercises/ex3/images/e3-itcm-claim-created.png)
 
-Empty remark for claim 5600.
+2.Empty remark for claim 5600.
 <br>![](/exercises/ex3/images/e3-itcm-claim-detail.png)
 
-Empty attachment for claim 5600.
+3.Empty attachment for claim 5600.
 <br>![](/exercises/ex3/images/e3-itcm-claim-empty-attachment.png)
 
 ## Step 3.2 - Upload invoice pic to Kyma runtime from the ITCM mobile app
 
 From a retailer's mobile app, scroll down to claim 5600, process the claim by taking a pic of an invoice document.
 
-Find claim 5600 from the retailer mobile app.
+1.Find claim 5600 from the retailer mobile app.
 <br>![](/exercises/ex3/images/e3-mobile-process-event.png)
 
-Take a pic of an invoice document for claim 5600.
+2.Take a pic of an invoice document for claim 5600.
 <br>![](/exercises/ex3/images/e3-mobile-upload-invoice.png)
 
 ## Step 3.3 - Upload function process the invoice pic in Kyma runtime and update claim in ITCM
 
-Go back to claim 5600 detail in ITCM, remark filled.
+1.Go back to claim 5600 detail in ITCM, remark filled.
 <br>![](/exercises/ex3/images/e3-itcm-remark.png)
 
-Also, the attachment file was uploaded.
+2.Also, the attachment file was uploaded.
 <br>![](/exercises/ex3/images/e3-itcm-claim-attachment.png)
 
 ## Summary

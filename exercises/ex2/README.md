@@ -18,10 +18,10 @@ Update claim with the remark and attachment in ITCM.
 function **itcm-func-exec**</br>
 Subscribe to the ITCM domain event, persist the event to a Redis cluster when the event is triggered.
 
-Create itcm-func-exec.
+1.Create itcm-func-exec.
 ![](/exercises/ex2/images/e2-func-exec.png)
 
-Write code in function source.
+2.Write code in function source.
 ![](/exercises/ex2/images/e2-func-exec-detail.png)
 
 Sample source code.
@@ -53,7 +53,7 @@ module.exports = {
 };
 ```
 
-Add dependencies for the function.
+3.Add dependencies for the function.
 ![](/exercises/ex2/images/e2-func-exec-dependencies.png)
 
 Add dependencies.
@@ -71,10 +71,10 @@ Add dependencies.
 }
 ```
 
-Add Redis Cluster Environment Variables.
+4.Add Redis Cluster Environment Variables.
 ![](/exercises/ex2/images/e2-func-exec-env.png)
 
-Subscribe to the event by adding an event trigger.
+5.Subscribe to the event by adding an event trigger.
 ![](/exercises/ex2/images/e2-func-exec-event-trigger.png)
 
 Save operation will trigger serverless function deployment automatically each time.
@@ -85,7 +85,7 @@ Wait until the function status change to running, then the function is ready to 
 function **itcm-func-fetch**</br>
 Fetch event data from Redis Cluster and expose data by a REST API.
 
-Write code in function source.
+1.Write code in function source.
 ![](/exercises/ex2/images/e2-func-fetch-source.png)
 
 Sample source code.
@@ -115,7 +115,7 @@ module.exports = {
 };
 ```
 
-Add dependencies.
+2.Add dependencies.
 ![](/exercises/ex2/images/e2-func-exec-dependencies.png)
 
 ```json
@@ -132,10 +132,10 @@ Add dependencies.
 }
 ``` 
 
-Add Redis Cluster Environment Variables.
+3.Add Redis Cluster Environment Variables.
 ![](/exercises/ex2/images/e2-func-fetch-env.png)
 
-Expose function by API Rule.
+4.Expose function by API Rule.
 ![](/exercises/ex2/images/e2-func-fetch-apirule.png)
 
 ## Step 2.3 - Create an upload function, process ITCM domain event
@@ -144,7 +144,7 @@ function **itcm-func-upload**</br>
 The upload function provide REST API for mobile App to upload invoice pic, calling a third party OCR service, extract remark base 
 on the pic, update claim with the remark, and the pic as an attachment.
 
-Write code in function source.
+1.Write code in function source.
 ![](/exercises/ex2/images/e2-func-upload-source.png)
 
 ```javascript
@@ -215,7 +215,7 @@ function updateClaim(claimId, remark, base64Str) {
 }
 ```
 
-Add dependencies.
+2.Add dependencies.
 ![](/exercises/ex2/images/e2-func-upload-depedencies.png)
 
 ```json
@@ -232,10 +232,10 @@ Add dependencies.
 }
 ```
 
-Add Redis Cluster & OCR Server Environment Variables.
+3.Add Redis Cluster & OCR Server Environment Variables.
 ![](/exercises/ex2/images/e2-func-upload-env.png)
 
-Expose function by API Rule.
+4.Expose function by API Rule.
 ![](/exercises/ex2/images/e2-func-upload-apirule.png) 
 
 ## Summary
