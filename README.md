@@ -44,8 +44,6 @@ The exercises demonstrate an e2e integration case from ITCM to Kyma step by step
     - [Step 3.2 - Upload invoice pic to Kyma runtime from the ITCM mobile app](exercises/ex3#step-32---upload-invoice-pic-to-kyma-runtime-from-the-itcm-mobile-app)
     - [Step 3.3 - Upload function process the invoice pic in Kyma runtime and update claim in ITCM](exercises/ex3#step-33---upload-function-process-the-invoice-pic-in-kyma-runtime-and-update-claim-in-itcm)
 
-Exercises demo video [here](https://sap.sharepoint.com/:v:/t/S4HANALabs-Eureka/Ef59Y7baROtJlhWeeLtLZ-QBKW4yQRztwDjm8Yiy4r4-tQ?e=h109W2).
-
 **IMPORTANT**
 
 Your repo must contain the .reuse and LICENSES folder and the License section below. DO NOT REMOVE the section or folders/files. Also, remove all unused template assets(images, folders, etc) from the exercises folder. 
