@@ -44,7 +44,7 @@ The exercises demonstrate an e2e integration case from ITCM to Kyma step by step
     - [Step 3.2 - Upload invoice pic to Kyma runtime from the ITCM mobile app](exercises/ex3#step-32---upload-invoice-pic-to-kyma-runtime-from-the-itcm-mobile-app)
     - [Step 3.3 - Upload function process the invoice pic in Kyma runtime and update claim in ITCM](exercises/ex3#step-33---upload-function-process-the-invoice-pic-in-kyma-runtime-and-update-claim-in-itcm)
 
-Exercises demo video [here](https://sap.sharepoint.com/:v:/r/teams/S4HANALabs-Eureka/Shared%20Documents/04%20-%20Engineering%20%26%20Ops/Tech%20Foundations/teched/TechEd.mp4?csf=1&web=1&e=Ll7Q6V).
+Exercises demo video [here](https://sap.sharepoint.com/:v:/t/S4HANALabs-Eureka/Ef59Y7baROtJlhWeeLtLZ-QBKW4yQRztwDjm8Yiy4r4-tQ?e=h109W2).
 
 **IMPORTANT**
 
