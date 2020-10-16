@@ -31,4 +31,5 @@ Two operating lines for this case:
 
 ## Summary
 
+Now you have the context of the exercise, let's get started. 
 Start exercise - [Exercise 1 - Setup connection between ITCM and Kyma runtime](../ex1/README.md)
