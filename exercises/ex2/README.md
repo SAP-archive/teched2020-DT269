@@ -6,7 +6,7 @@ In this exercise, we will create several serverless functions for extensional se
 Consumer for ITCM domain event.
 
 - **itcm-func-fetch**</br>
-Expose fetch API for mobile App to list domain events.
+Expose fetch API for mobile App to list domain event notifications.
 
 - **itcm-func-upload**</br>
 Expose upload API for mobile App to upload invoice pic.
@@ -16,15 +16,15 @@ Update claim with the remark and attachment in ITCM.
 ## Step 2.1 - Create an exec function for consuming ITCM domain events
 
 function **itcm-func-exec**</br>
-Subscribe the ITCM domain event, persist event to a Redis cluster when the event triggered.
+Subscribe to the ITCM domain event, persist the event to a Redis cluster when the event is triggered.
 
-Create itcm-func-exec from the left panel.
+Create itcm-func-exec.
 ![](/exercises/ex2/images/e2-func-exec.png)
 
 Write code in function source.
 ![](/exercises/ex2/images/e2-func-exec-detail.png)
 
-Type in source code.
+Sample source code.
 ```javascript
 const asyncRedis = require("async-redis");
 const {v4: uuidv4} = require('uuid');
@@ -74,11 +74,11 @@ Add dependencies.
 Add Redis Cluster Environment Variables.
 ![](/exercises/ex2/images/e2-func-exec-env.png)
 
-Subscribe the event by adding an event trigger.
+Subscribe to the event by adding an event trigger.
 ![](/exercises/ex2/images/e2-func-exec-event-trigger.png)
 
 Save operation will trigger serverless function deployment automatically each time.
-Wait until the function status change to running, the function is ready to serve.
+Wait until the function status change to running, then the function is ready to serve.
 
 ## Step 2.2 - Create a fetch function, expose API for the external solution
 
@@ -88,7 +88,7 @@ Fetch event data from Redis Cluster and expose data by a REST API.
 Write code in function source.
 ![](/exercises/ex2/images/e2-func-fetch-source.png)
 
-Type in source code.
+Sample source code.
 ```javascript
 const asyncRedis = require('async-redis');
 const prefix = "claimId-";
@@ -141,8 +141,8 @@ Expose function by API Rule.
 ## Step 2.3 - Create an upload function, process ITCM domain event
 
 function **itcm-func-upload**</br>
-The upload function provide REST API for mobile App upload invoice pic, calling a third party OCR service, extract remark base 
-on the pic, update claim related with remark and pic as an attachment.
+The upload function provide REST API for mobile App to upload invoice pic, calling a third party OCR service, extract remark base 
+on the pic, update claim with the remark, and the pic as an attachment.
 
 Write code in function source.
 ![](/exercises/ex2/images/e2-func-upload-source.png)
@@ -194,7 +194,7 @@ function extractRemark(base64) {
 
   try {
     let res = request("POST", process.env.OCR_URL, { json: data });
-    let result = JSON.parse(res.getBody('utf8'));
+    result = JSON.parse(res.getBody('utf8'));
     console.log("ocr input: %s, ocr result: %s", base64, result);
   } catch (e) {
     console.log("ocr error: %s", e);
@@ -203,7 +203,7 @@ function extractRemark(base64) {
 }
 
 function updateClaim(claimId, remark, base64Str) {
-  let payload = { claimsId: claimId, remark: remark, tenantId: 5005, attachment: base64Str };
+  let payload = { claimsId: claimId, remark: remark, attachment: base64Str };
   console.log("request itcm payload: %s", payload);
   try {
     let res = request("POST", "https://extensions-gateway.dev2.eurekacloud.io/claim-submission/addAttachment", { json: payload });

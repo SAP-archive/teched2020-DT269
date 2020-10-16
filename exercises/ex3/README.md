@@ -1,11 +1,11 @@
 # Exercise 3 - Interaction between ITCM and Kyma runtime
 
 Now, let's start the interaction!
-First, sync a claim in ITCM. The "Claim Created" event was published through the channel defined in ITCM Extension Center.
-Function itcm-func-exec do the event persistence. 
-Mobile App syncs the event data by calling function itcm-func-fetch.
+First, sync a claim in ITCM. ITCM publishes the "Claim Created" event through the channel predefined in ITCM Extension Center.
+Function *itcm-func-exec* do the event persistence. 
+The mobile app syncs the event data by calling function *itcm-func-fetch*.
 From the mobile app, a retailer process an event by taking a pic of an invoice document.
-Function itcm-func-upload process the pic, call a 3rd party OCR service by REST API. 
+Function *itcm-func-upload* process the pic, call a 3rd party OCR service by REST API. 
 Extract a remark, update related claim with an extracted remark, and the invoice document as an attachment.
 
 ## Step 3.1 - Sync a new claim which has an empty remark in ITCM
@@ -45,5 +45,5 @@ You've now completed the Exercise and learned
 
 - Pair ITCM & Kyma runtime.
 - Implement an extensional service by creating a serverless function in Kyma runtime.
-- Extensibility ITCM is provided, demonstrated by an e2e user case.
+- Powerful Extensibility ITCM provided, demonstrated by an e2e user case.
 

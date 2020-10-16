@@ -4,7 +4,8 @@ This repository contains the material for the SAP TechEd 2020 session called DT2
 
 ## Overview
 
-This session introduces attendees to SAP ITCM extensibility from Kyma runtime, which brings smooth integration experiences between ITCM and Kyma runtime. The extensibility not only makes possible integration between ITCM and SAP on promise solution via Kyma runtime but also can be leveraged by partners to provide customized solutions and full fill their e2e user cases around ITCM.
+This session introduces attendees to SAP ITCM extensibility from Kyma runtime, which brings smooth integration experiences between ITCM and Kyma runtime. 
+The extensibility not only makes possible integration between ITCM and SAP on promise solution via Kyma runtime but also can be leveraged by partners to provide customized solutions and full fill their e2e user cases around ITCM.
 
 - **ITCM** </br>
 A Kubernetes based SaaS offering, behind the scenes, is composed of serval micro-services. Communication with each other is mostly events, which is known as an event-driving architecture.
@@ -14,14 +15,16 @@ A Kubernetes based SaaS offering, behind the scenes, is composed of serval micro
 > Kyma is a cloud-native extensibility framework developed to overcome the challenges of digital transformation, which include heterogeneous product portfolio, monolithic deployments, and cloud-native development. Our goal is to provide application extensions in a cloud-native fashion and with increased agility through seamless integration with the products.</br>
  \- cxwiki.sap.com
 
-ITCM build-in supports for Kyma runtime, in ITCM Extension Center, user can easily register Kyma runtime, publish event Mesh or Open API to Kyma runtime. Use a serverless function for a customized solution in Kyma runtime. In a serverless fashion, partners can focus on the integration code only. CI/CD part like building, deployment, autoscale,   etc., will be taken over by Kyma runtime.
+ITCM build-in supports for Kyma runtime, in ITCM Extension Center, users can easily register Kyma runtime, publish Event Mesh or Open API to Kyma runtime. 
+Use a serverless function for a customized solution in Kyma runtime. With a serverless function, partners can focus on the integration logic only. 
+CI/CD part like building, deployment, autoscaling, etc., will be taken over by Kyma runtime.
 
-Exercises demonstrate an e2e integration case from ITCM to Kyma step by step.
+The exercises demonstrate an e2e integration case from ITCM to Kyma step by step.
 
 ## Requirements
 
-- ITCM solution provision on cloud
-- Kyma runtime provision by SAP Cloud Platform(SCP) or Kyma cli on cloud
+- ITCM solution provisioned on cloud
+- Kyma runtime provisioned by SAP Cloud Platform(SCP) or Kyma cli on cloud
 
 ## Exercises
 
@@ -41,7 +44,7 @@ Exercises demonstrate an e2e integration case from ITCM to Kyma step by step.
     - [Step 3.2 - Upload invoice pic to Kyma runtime from the ITCM mobile app](exercises/ex3#step-32---upload-invoice-pic-to-kyma-runtime-from-the-itcm-mobile-app)
     - [Step 3.3 - Upload function process the invoice pic in Kyma runtime and update claim in ITCM](exercises/ex3#step-33---upload-function-process-the-invoice-pic-in-kyma-runtime-and-update-claim-in-itcm)
 
-exercises demo video [here](https://sap.sharepoint.com/:v:/r/teams/S4HANALabs-Eureka/Shared%20Documents/04%20-%20Engineering%20%26%20Ops/Tech%20Foundations/teched/TechEd.mp4?csf=1&web=1&e=Ll7Q6V).
+Exercises demo video [here](https://sap.sharepoint.com/:v:/r/teams/S4HANALabs-Eureka/Shared%20Documents/04%20-%20Engineering%20%26%20Ops/Tech%20Foundations/teched/TechEd.mp4?csf=1&web=1&e=Ll7Q6V).
 
 **IMPORTANT**
 
