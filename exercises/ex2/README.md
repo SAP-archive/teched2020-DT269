@@ -147,6 +147,7 @@ on the pic, update claim with the remark, and the pic as an attachment.
 1.Write code in function source.
 ![](/exercises/ex2/images/e2-func-upload-source.png)
 
+Sample source code.
 ```javascript
 const asyncRedis = require("async-redis");
 const request = require('sync-request');
