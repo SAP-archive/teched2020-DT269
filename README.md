@@ -1,5 +1,7 @@
 # DT269 - Extensibility for SAP Intelligent Trade Claims Management(ITCM) from project Kyma
 
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/teched2020-DT269)](https://api.reuse.software/info/github.com/SAP-samples/teched2020-DT269)
+
 This repository contains the material for the SAP TechEd 2020 session called DT269 - Extensibility for SAP Intelligent Trade Claims Management(ITCM) from the project Kyma.  
 
 ## Overview
